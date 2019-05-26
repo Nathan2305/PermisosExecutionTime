@@ -89,10 +89,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent information) {
         if (requestCode==REQUEST_TAKE_PICTURE && resultCode== RESULT_OK){
             //la foto viaja con atributo "data"
-            Bitmap bitmap= (Bitmap) data.getExtras().get("data");
+            Bitmap bitmap= (Bitmap) information.getExtras().get("data");
             imvFoto.setImageBitmap(bitmap);
         }
 
